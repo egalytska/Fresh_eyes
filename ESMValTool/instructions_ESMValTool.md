@@ -109,6 +109,6 @@ Now, lets make sure ESMValTool will download missing data. Download ````data-loc
 2. Run the recipe and review the show the resulting plot:
 
    ```
-   esmvaltool run recipe_warming_stripes.yml
+   esmvaltool run recipe_temperature_anomalies.yml
    ```
 3. Investigate the output in your _online_seminar_ folder. Which subfolders has ESMValTool created? Can you find where the figures are stored? 
