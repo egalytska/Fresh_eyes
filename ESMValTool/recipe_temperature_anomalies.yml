@@ -1,0 +1,193 @@
+---
+documentation:
+  title: >
+    Near-surface air temperature anomalies and Arctic warming stripes
+
+  description: >
+    Calculate monthly near-surface air temperature anomalies relative
+    to the 1981-2010 reference period (as in e.g. Ranthanen et al., 2022, 
+    https://doi.org/10.1038/s43247-022-00498-3) for ACCESS-CM2 and 
+    visualize the anomaly map, Arctic temperature anomalies, and
+    Arctic warming stripes.
+
+  authors:
+    - galytska_evgenia
+
+
+datasets:
+  - dataset: ACCESS-CM2
+    project: CMIP6
+    mip: Amon
+    exp: 
+      - historical
+      - ssp585
+    ensemble: r1i1p1f1
+    grid: gn
+    start_year: 1850
+    end_year: 2024
+
+
+preprocessors:
+
+  # ============================================================
+  # TEMPERATURE ANOMALIES MAP
+  #
+  # -> monthly anomalies relative to 1981-2010
+  # -> analyzed period 1979-2024
+  # ============================================================
+
+  global_anomalies_map:
+
+    custom_order: true
+
+    convert_units:
+      units: degrees_C
+
+    anomalies:
+      period: month
+      reference:
+        start_year: 1981
+        start_month: 1
+        start_day: 1
+        end_year: 2010
+        end_month: 12
+        end_day: 31
+
+    extract_time:
+      start_year: 1979
+      start_month: 1
+      start_day: 1
+      end_year: 2024
+      end_month: 12
+      end_day: 31
+
+    climate_statistics:
+      operator: mean
+      period: full
+
+
+  # ============================================================
+  # ARCTIC MONTHLY TIME SERIES
+  #
+  # -> monthly anomalies relative to 1981-2010
+  # -> analyzed period 1979-2024
+  # -> mean over 65-90N
+  # -> zonal mean 
+  # Output: monthly Arctic anomalies
+  # ============================================================
+
+  arctic_monthly_anomalies:
+
+    custom_order: true
+
+    convert_units:
+      units: degrees_C
+
+    anomalies:
+      period: month
+      reference:
+        start_year: 1981
+        start_month: 1
+        start_day: 1
+        end_year: 2010
+        end_month: 12
+        end_day: 31
+
+    extract_time:
+      start_year: 1979
+      start_month: 1
+      start_day: 1
+      end_year: 2024
+      end_month: 12
+      end_day: 31
+
+    extract_region:
+      start_longitude: 0
+      end_longitude: 360
+      start_latitude: 65
+      end_latitude: 90
+
+    zonal_statistics:
+      operator: mean
+
+    meridional_statistics:
+      operator: mean
+
+
+  # ============================================================
+  # ARCTIC ANNUAL MEANS
+  #
+  # Same as above, but additionally:
+  # -> annual mean
+  #
+  # Output: 1979-2024 annual Arctic anomalies
+  # ============================================================
+
+  arctic_annual_anomalies:
+
+    custom_order: true
+
+    convert_units:
+      units: degrees_C
+
+    anomalies:
+      period: month
+      reference:
+        start_year: 1981
+        start_month: 1
+        start_day: 1
+        end_year: 2010
+        end_month: 12
+        end_day: 31
+
+    extract_time:
+      start_year: 1979
+      start_month: 1
+      start_day: 1
+      end_year: 2024
+      end_month: 12
+      end_day: 31
+
+    extract_region:
+      start_longitude: 0
+      end_longitude: 360
+      start_latitude: 65
+      end_latitude: 90
+
+    zonal_statistics:
+      operator: mean
+
+    meridional_statistics:
+      operator: mean
+
+    annual_statistics:
+      operator: mean
+
+
+diagnostics:
+
+  temperature_anomalies:
+
+    description: >
+      Plot the time-mean temperature anomaly map, Arctic monthly
+      temperature anomaly time series, and Arctic warming stripes.
+
+    variables:
+
+      tas_map:
+        short_name: tas
+        preprocessor: global_anomalies_map
+
+      tas_arctic:
+        short_name: tas
+        preprocessor: arctic_monthly_anomalies
+
+      tas_arctic_annual:
+        short_name: tas
+        preprocessor: arctic_annual_anomalies
+
+    scripts:
+
+      plotting_anomalies:
+        script: /path/to/diagnostic_file/plot_temperature_anomalies.py
+        colormap: bwr
