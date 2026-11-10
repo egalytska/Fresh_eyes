@@ -1,0 +1,7 @@
+[deps]
+intake-esgf = ""
+numpy = ""
+xarray = ""
+python = "=3.12"
+netcdf4 = ""
+libpython = ""
