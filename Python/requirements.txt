@@ -1,0 +1,13 @@
+cartopy
+intake
+intake-esm
+gcsfs
+boto3
+azure-storage-blob
+esgf-pyclient
+siphon
+jupyterlab
+xarray[complete]
+s3fs
+dask[complete]
+pydantic<2.12
