@@ -1,0 +1,22 @@
+{
+  "model": "ACCESS-CM2",
+  "variable": "tas",
+  "frequency": "monthly",
+  "member": "r1i1p1f1",
+  "grid": "gn",
+  "source_commit": "040b9c7962355b1f8fa1312b7af867b458102b85",
+  "assets": [
+    {
+      "filename": "tas_Amon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc",
+      "url": "https://nc.uni-bremen.de/index.php/s/jRtQpitqdTD5fEc/download",
+      "sha256": "3e106e8430f04cd2b260a7230b1e461ccebdda338d09e3f07e8497678c5c6f0f",
+      "hash_provenance": "SHA-256 retained from the previously validated local workshop asset manifest; an independent publisher checksum was not supplied."
+    },
+    {
+      "filename": "tas_Amon_ACCESS-CM2_ssp585_r1i1p1f1_gn_201501-210012.nc",
+      "url": "https://raw.githubusercontent.com/egalytska/Fresh_eyes/040b9c7962355b1f8fa1312b7af867b458102b85/tas_Amon_ACCESS-CM2_ssp585_r1i1p1f1_gn_201501-210012.nc",
+      "sha256": "8f0d0cee4c370c0c30acc31ef6bf03a2592ee3dfd827a13e37716cd7484909b1",
+      "hash_provenance": "SHA-256 measured from the user-downloaded source file on 2026-11-09; an independent publisher checksum was not supplied."
+    }
+  ]
+}
