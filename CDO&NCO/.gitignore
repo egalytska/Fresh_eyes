@@ -1,0 +1,11 @@
+outputs/
+demo/
+.cache/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pyc
+data/access_cm2/
+data/updated_fixture/
+*.nc
+*.nc.part

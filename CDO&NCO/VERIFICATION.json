@@ -1,0 +1,147 @@
+{
+  "date": "2026-11-10",
+  "execution_method": "IPython in-process execution of the actual notebook cells; no live Jupyter/Binder browser test",
+  "test_path_includes_ampersand": true,
+  "data": "Real ACCESS-CM2 historical + SSP5-8.5; 1979\u20132024",
+  "unit_tests": {
+    "count": 10,
+    "passed": true
+  },
+  "notebooks": [
+    {
+      "file": "notebooks/00_yl_20_minute_binder_demo.ipynb",
+      "code_cells_passed": 117,
+      "passed": true,
+      "captured_stderr_empty": true,
+      "comparisons": {
+        "cdo/climatology": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/climatology": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/anomaly": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/anomaly": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/map_mean": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/map_mean": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/arctic_monthly": {
+          "max_absolute_difference_degC": 3.552713678800501e-15,
+          "passed": true
+        },
+        "nco/arctic_monthly": {
+          "max_absolute_difference_degC": 2.6645352591003757e-15,
+          "passed": true
+        },
+        "cdo/arctic_annual": {
+          "max_absolute_difference_degC": 8.881784197001252e-16,
+          "passed": true
+        },
+        "nco/arctic_annual": {
+          "max_absolute_difference_degC": 4.440892098500626e-16,
+          "passed": true
+        }
+      }
+    },
+    {
+      "file": "notebooks/04_monthly_anomaly_hands_on.ipynb",
+      "code_cells_passed": 132,
+      "passed": true,
+      "captured_stderr_empty": true,
+      "comparisons": {
+        "cdo/climatology": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/climatology": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/anomaly": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/anomaly": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/map_mean": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "nco/map_mean": {
+          "max_absolute_difference_degC": 0.0,
+          "passed": true
+        },
+        "cdo/arctic_monthly": {
+          "max_absolute_difference_degC": 3.552713678800501e-15,
+          "passed": true
+        },
+        "nco/arctic_monthly": {
+          "max_absolute_difference_degC": 2.6645352591003757e-15,
+          "passed": true
+        },
+        "cdo/arctic_annual": {
+          "max_absolute_difference_degC": 8.881784197001252e-16,
+          "passed": true
+        },
+        "nco/arctic_annual": {
+          "max_absolute_difference_degC": 4.440892098500626e-16,
+          "passed": true
+        }
+      }
+    },
+    {
+      "file": "notebooks/05_annual_stripes_short_demo.ipynb",
+      "code_cells_passed": 46,
+      "passed": true,
+      "captured_stderr_empty": true,
+      "comparisons": {
+        "cdo": {
+          "years": 46,
+          "passed": true,
+          "max_absolute_difference_degC": 6.394884621840902e-14,
+          "baseline_difference_degC": 1.438849039914203e-13,
+          "baseline_anomaly_residual_degC": 1.0658141036401502e-15,
+          "annual_temperature_and_subtraction_checked": true
+        },
+        "nco": {
+          "years": 46,
+          "passed": true,
+          "max_absolute_difference_degC": 2.611244553918368e-13,
+          "baseline_difference_degC": 4.778399897986674e-13,
+          "baseline_anomaly_residual_degC": 1.3026616822268502e-15,
+          "annual_temperature_and_subtraction_checked": true
+        }
+      }
+    }
+  ],
+  "source_hashes": {
+    "notebooks/00_yl_20_minute_binder_demo.ipynb": "de210c5918811833690f3727735aebfff3a5f9622e13a617a0f708e64daf79ef",
+    "notebooks/04_monthly_anomaly_hands_on.ipynb": "779aa85df07fcc372b7cca95fd05249b48c49650fedd1d7bdafc11790e880bf5",
+    "notebooks/05_annual_stripes_short_demo.ipynb": "1eac67c99d5356e0638bb050a5c5848e5f68d6aa29f3b71bef43fc018d79aeea",
+    "scripts/check_updated_inputs.py": "2e0564239b3dc6b1b6fc76e7d6507bd589fc33add2c64963aac5a2e6ffc28464",
+    "scripts/check_updated_notebook_cells.py": "6031505ea92e34f73588aae5bacfa5582de2a0807a4e5c527c9b3ef061e35366",
+    "scripts/compare_short_annual.py": "d7eb69c193db31254869ba171c9b2138bbbcc4bfa483f2668902819f677a40d5",
+    "scripts/compare_updated_workflows.py": "0e00a39ce7f606d5a17653a6e873c73c10224de51c9a84b994313350bc0c6a2e",
+    "scripts/fetch_updated_data.py": "f1fe3dbe4e1dfeaf12f4ebc6b2b8f1d0d4bd1b0aa51f1ccf77591be54128515b",
+    "scripts/generate_updated_fixture.py": "70df1a2b999f5643787ec0b74864fbccc889ac193bff9c6f26581cdef459cba3",
+    "scripts/run_python_updated.py": "84e4afd9107fb02f904806877d4570d1277010c8b272337fbf3bc0362cd333e4",
+    "tests/test_fetch_updated_data.py": "c45c216a5d81f3e0a7fb6127ed695bbbce0f186caaf24d8d29499c728aa371d9",
+    "tests/test_updated_contract.py": "87298eb2fc7c9f6c0cf29ef6a0af43e43c516ed199da72e63661299acb6f626f"
+  },
+  "passed": true
+}

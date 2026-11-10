@@ -1,0 +1,12 @@
+{
+  "author": "Yiwen Li",
+  "companion_repository": "https://github.com/YiwenLiEven/Fresh-Eyes-CDO-NCO-Workshop",
+  "annual_lesson_source_commit": "db8212ef0e4e5483b0c47d392a8191a149e7fdc7",
+  "prepared_date": "2026-11-10",
+  "adaptations": [
+    "Portable nested directory README/environment and terminal guide",
+    "Mixed CDO/NCO seven-command exercise",
+    "Replaced obsolete Mac-only error hint; processing commands unchanged"
+  ],
+  "data_manifest": "data/manifest.json"
+}
