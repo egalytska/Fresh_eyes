@@ -7,12 +7,16 @@
 
 #### **Setup and Execution**
 
-**Option 1: Run in Browser (MyBinder)**
-Click the badge below to launch the Jupyter notebook directly in your browser. The environment comes pre-installed with all necessary Julia dependencies.
+**Option 1: Run in Browser (Google Colab)**
+Click the badge below to open the notebook in Google Colab. You only need a Google account, no installation required.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TimMauch/Julia-CMIP/main?labpath=climate_stripes_binder.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P-C8BvMVHggqNaODqEQXZMjTTKFGm3wC)
 
-*Note: The initial Binder launch may take a few minutes to build the environment. The badge opens `climate_stripes_binder.ipynb`, a version of the notebook adapted to the limited memory on Binder.*
+1. Check that the runtime is set to Julia: **Runtime → Change runtime type → Julia**.
+2. Run the **Setup** cell first. Installing and precompiling the packages takes about 10–15 minutes.
+3. Run the remaining cells.
+
+*Note: To keep your changes, save your own copy via **File → Save a copy in Drive**. The setup cell has to be run again in every new Colab session.*
 
 ---
 
