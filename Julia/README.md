@@ -7,14 +7,12 @@
 
 #### **Setup and Execution**
 
-**Option 1: Run in Browser (Google Colab)**
-Click the badge below to open the notebook in Google Colab. You only need a Google account, no installation required.
+**Option 1: Run in Binder**
+Click the badge below to open the notebook in Binder. 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P-C8BvMVHggqNaODqEQXZMjTTKFGm3wC)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TimMauch/Julia-CMIP/main?urlpath=%2Fdoc%2Ftree%2Fclimate_stripes.ipynb)
 
-1. Check that the runtime is set to Julia: **Runtime → Change runtime type → Julia**.
-2. Run the **Setup** cell first. Installing and precompiling the packages takes about 10–15 minutes.
-3. Run the remaining cells.
+Important: After running the speed comparison, please restart the binder kernel, becuase otherwise the meomery of your session will be exhausted!
 
 *Note: To keep your changes, save your own copy via **File → Save a copy in Drive**. The setup cell has to be run again in every new Colab session.*
 
@@ -33,9 +31,9 @@ Open VS Code, navigate to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`),
     * **Jupyter** (by Microsoft)
 
 3. **Clone the Repository**
-Open your terminal or command prompt and clone this repository:
+Open your terminal or command prompt and clone the repository:
 ```bash
-git clone https://github.com/TimMauch/Julia-CMIP.git
+git clone https://github.com/link/to/repo
 cd Julia-CMIP
 ```
 
